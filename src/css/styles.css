@@ -1,0 +1,210 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+@import url('./reset.css');
+@import url('./vite-promo.css');
+@import url('./header.css');
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #242424;
+  background-color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+ }
+
+.gallery-image {
+  width: 360px;
+  height: 200px;
+}
+
+.gallery-item {
+  border: #242424;
+  border: 2px solid black;
+}
+
+.modal {
+  width: 1112px;
+  height: 640px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.feedback-form {
+  display: block;
+ }
+
+/*++++++++++++++++++=======================*/
+
+.loader {
+  animation: rotate 1s infinite;
+  height: 50px;
+  width: 50px;
+}
+
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+
+.loader:before {
+  animation: ball1 1s infinite;
+  background-color: #fff;
+  box-shadow: 30px 0 0 #ff3d00;
+  margin-bottom: 10px;
+}
+
+.loader:after {
+  animation: ball2 1s infinite;
+  background-color: #ff3d00;
+  box-shadow: 30px 0 0 #fff;
+}
+/*+++++++++++++++++++++++++++++++++++=======================================
+.loaderbtn {
+  
+  }
+
+.wrapper{
+  display: flex;
+  width: 340px;
+  height: 48px;
+  padding-left: 4px; 
+}
+++++++++++++++++++++++++++++++++== */
+
+.loaderbtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+    top: 0px;
+    left: 0px;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loaderbtn::after,
+.loaderbtn::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #FF3D00;
+  width: 16px;
+  height: 16px;
+  transform: translate(-50%, 50%);
+  border-radius: 50%;
+}
+
+.loaderbtn::before {
+  left: auto;
+  right: 0;
+  background: #FFF;
+  transform: translate(50%, 100%);
+}
+
+.loadmore {
+  display:flex;
+  justify-content: center;
+  padding-top: 4px;
+}
+
+.loadermorebtn {
+
+}
+
+.wrapper {
+  display: flex;
+  width: 340px;
+  height: 48px;
+  padding-left: 4px;
+}
+
+/*+++++++++++++++++++=================================*/
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(0.8)
+  }
+
+  50% {
+    transform: rotate(360deg) scale(1.2)
+  }
+
+  100% {
+    transform: rotate(720deg) scale(0.8)
+  }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 #ff3d00;
+  }
+
+  50% {
+    box-shadow: 0 0 0 #ff3d00;
+    margin-bottom: 0;
+    transform: translate(15px, 15px);
+  }
+
+  100% {
+    box-shadow: 30px 0 0 #ff3d00;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    box-shadow: 30px 0 0 #fff;
+  }
+
+  50% {
+    box-shadow: 0 0 0 #fff;
+    margin-top: -20px;
+    transform: translate(15px, 15px);
+  }
+
+  100% {
+    box-shadow: 30px 0 0 #fff;
+    margin-top: 0;
+  }
+}

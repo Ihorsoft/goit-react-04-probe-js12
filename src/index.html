@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Server</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+    <section>
+        <a href="./index.html">RESET</a>
+        <h1>Welcome to seaching by pixabay with AXIOS </h1>
+    </section>
+
+    <div id="app">
+
+        <div class="form">
+        
+            <form class="feedback-form" autocomplete="off">
+                <label>
+                    Search IMAGE
+                    <input type="text" name="keySearch" class="form-input" placeholder="Input search word" autofocus />
+                </label>
+               <button type="submit" class="form-btn" data-search>Submit</button>
+            </form>
+       
+            <div class="css-loader">
+                <span class="loader"></span>
+            </div>
+
+        <ul class="list"></ul>
+
+          <div class="loadmore">
+                <button type="botton" class="loadermorebtn" data-more>Load More</button>
+
+                <div>
+                    <span class="loaderbtn"></span>
+                </div>
+
+           </div>
+          
+
+
+        </div>
+
+
+    </div>
+    
+    <script type="module" src="./main.js" defer></script>
+
+</body>
+
+</html>
